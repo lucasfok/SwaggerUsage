@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <title>Swagger Usage</title>
+    <meta name="description" content="A way to explore some utilities from swagger">
+
+    <!-- URL CANONICAL -->
+    <link rel="canonical" href="https://lucasfok.me/">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@https://lucasfok.me/">
+    <meta name="twitter:creator" content="@_lucasfok">
+    <meta name="twitter:title" content="Swagger Usage and API versioning">
+    <meta name="twitter:description" content="A simple presentation to enforce some API and Swagger combination.">
+    <meta name="twitter:image" content="../static/images/share-webslides.jpg">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="../index.html" title="Swagger Usage">Swagger Usage</a></p>
+        <ul>
+          <li class="github">
+            <a rel="external" href="https://github.com/lucasfok" title="Github">
+              <svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg>
+              <em>lucasfok</em>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <article id="webslides">
+
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section class="bg-purple aligncenter">
+         <span class="background dark" style="background-image:url('https://source.unsplash.com/C1HhAQrbykQ/')"></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1 class="text-landing">Swagger Usage</h1>
+            <p class="text-symbols">Exploring swagger utilization with a guide that won't let me forget about them.</p>
+            <p>
+              <a class="button ghost" href="https://github.com/lucasfok" title="About me">
+                <svg class="fa-github">
+                  <use xlink:href="#fa-github"></use>
+                </svg>
+                lucasfok
+              </a>
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap size-50">
+            <h3>Summary</h3>
+            <p>It's dangerous to go alone, take this. Joking, go directly to the point </p>
+            <hr>
+            <ol class="text-cols">
+              <li><a target="_blank" href="#slide=3">Welcome</a></li>
+              <li><a target="_blank" href="#slide=4">Software evolves. API should evolve too</a></li>
+              <li><a target="_blank" href="#slide=5">The Versioning process</a></li>
+              <li><a target="_blank" href="#slide=10">Implementing</a></li>
+              <li><a target="_blank" href="#slide=14">Configure Swagger</a></li>
+              <li><a target="_blank" href="#slide=16">Tips</a></li>
+              <li><a target="_blank" href="#slide=22">Thanks</a></li>
+            </ol>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50">
+            <h2 class="text-landing">Hey</h2>
+            <p class="text-intro">              
+              <strong>I'm Lucas Felipe Kaspary, developer</strong>
+              </br>
+              The idea of this presentation is to enforce some Swagger configuration, not about API. 
+              That's why we are using the content provided by <strong><a href="https://www.troyhunt.com/your-api-versioning-is-wrong-which-is/">Troy Hunt's post</a></strong> as a great reference for the different types of API version usage.
+              </br>
+              </br>
+              I've made some changes based on my own experience, but his post has a great synthesis that was very useful to create some context.
+            </p>
+          </div>
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-60">
+            <h3><strong>APIs Evolve</strong> There's nothing new here.</h3>
+            <hr>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>You need to create a safe environment for your consumers.</h2>
+                  <p>This is should be your main rule. Do not break your integration with stupid changes that could conflict with previous versions.</p>
+                </li>
+                <li>
+                  <h2>Swagger allows your service to be understandable.</h2>
+                  <p>Reduce the time to provide information when they could be automatically created.</p>
+                </li>
+              </ul>
+            </div> <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap">
+            <h3>Versioning process</h3>
+            <ul class="flexblock steps">
+              <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
+              <li>
+                <span>
+                  <svg class="fa-heartbeat">
+                    <use xlink:href="#fa-heartbeat"></use>
+                  </svg>
+                </span>
+                <h2>01. Choose the best match for your scenario</h2>
+                <ul>
+                  <li>Defined URL</li>
+                  <li>Query string</li>
+                  <li>Custom request header</li>
+                  <li>Accept header</li>
+                </ul>
+              </li>
+              <li>
+                <div class="process step-2"></div>
+                <span>
+                  <svg class="fa-magic">
+                    <use xlink:href="#fa-magic"></use>
+                  </svg>
+                </span>
+                <h2>02. Implementing</h2>
+                <p>
+                  It's easier than you expect. </br>
+                  There's a MS package for our problems. 
+                </p>
+              </li>
+              <li>
+                <div class="process step-3"></div>
+                <span>
+                  <svg class="fa-balance-scale">
+                    <use xlink:href="#fa-balance-scale"></use>
+                  </svg>
+                </span>
+                <h2>03. Configure Swagger</h2>
+                <p>Allow your clients to see and use your API</p>
+              </li>
+              <li>
+                <div class="process step-4"></div>
+                <span>
+                  <svg class="fa-cog">
+                    <use xlink:href="#fa-cog"></use>
+                  </svg>
+                </span>
+                <h2>04. Tips</h2>
+                <p>Some of them could help you</p>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h3 class="text-context">
+                Defined URL</h3>
+                <p>
+                  The wanter version is provided in the route, for example: </br>
+                  <a href="https://my-api.com/api/v2/weather" title="Weather API">https://my-api.com/api/v2/weather</a>
+                </p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Pros</h6>
+                <p>Version easily readable by humans and also any service</p>
+                <p>Normally reflect changes in the contract, not in the behavior</p>
+                <p>Useful in microservices, allowing the services to continue operating with or without changes</p>
+                <p>Every service has his own version</p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Cons</h6>
+                <p>The version is normally representing the DTO/entity version</p>
+                <p>Not that easy to handle internal flows when hitting the application</p>
+                <p>We shouldn't change frequently our URL</p>
+                <p>Not great for consumers to deal with a lot of endpoints</p>
+              </div>
+              <!-- end .column -->
+            </div>
+            <!-- end .grid -->
+          </div>
+          <!-- end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h3 class="text-context">
+                Query string</h3>
+                <p>
+                  The wanted version can be provided in the route, for example: </br>
+                  <a href="https://my-api.com/api/weather?v=2" title="Weather API">https://my-api.com/api/weather?v=2</a>
+                </p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Pros</h6>
+                <p>Also easily readable by humans and also any service</p>
+                <p>Since it's more dynamical, can be easily changed or even not provided, accepting a default version as a pattern.</p>
+                <p>Useful when your versions changed specific methods, not the entire service or api</p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Cons</h6>
+                <p>You aren't necessarily in control of what your consumers are using</p>
+                <p>Also not great for consumers to deal with a lot of endpoints</p>                
+                <p>Seems harder to control changelog and consumers</p>
+                <p>If you have a giant input parameters at your service, you can face some URL lenght problems.</p>
+              </div>
+              <!-- end .column -->
+            </div>
+            <!-- end .grid -->
+          </div>
+          <!-- end .wrap -->
+        </section>        
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h3 class="text-context">
+                Custom request header</h3>
+                <p>
+                  The URL is clean and represents the endpoint itself: </br>
+                  <a href="https://my-api.com/api/weather" title="Weather API">https://my-api.com/api/weather</a> 
+                  </br>
+                  <small>api-version: 2</small>
+                </p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Pros</h6>
+                <p>Normally readable by any service</p>
+                <p>It's more dynamical and the changes normally affect all the endpoints</p>
+                <p>Great for consumers like mobile applications, creating a default access attached to a build number, for example</p>
+                <p>Can be easily changed or even not provided, accepting a default version as a pattern</p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Cons</h6>
+                <p>Not so easily readable by humans</p>
+                <p>You aren't necessarily in control of what your consumers are using</p>                
+                <p>It's not a semantic way of descrive a resource (explained in the next option)</p>
+              </div>
+              <!-- end .column -->
+            </div>
+            <!-- end .grid -->
+          </div>
+          <!-- end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h3 class="text-context">
+                Accept header</h3>
+                <p>
+                  The URL is clean and represents the endpoint itself: </br>
+                  <a href="https://my-api.com/api/weather" title="Weather API">https://my-api.com/api/weather</a> 
+                  </br>
+                  <small>Accept: application/vnd.myapi.v2+json</small>
+                </p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Pros</h6>
+                <p>This will follow the HTTP spec to emphasize how the content is represented and describing the resource.</p>
+                <p>Useful when your versions changed specific methods, not the entire service or api</p>
+              </div>
+              <!-- end .column -->
+              <div class="column">
+                <h6>Cons</h6>
+                <p>Not so easily readable by humans</p>
+                <p>Not so easily readable by services (they need to configure carefully the accept header, that now isn't a pattern anymore) </p>
+              </div>
+              <!-- end .column -->
+            </div>
+            <!-- end .grid -->
+          </div>
+          <!-- end .wrap -->
+        </section>                        
+        <section>
+          <div class="wrap">
+            <h2>Implementing</h2>
+            <p>Use the NuGet Package Mananger to add <code>Microsoft.AspNetCore.Mvc.Versioning</code>.</p>
+            <div class="text-cols">
+              <p>Everyone loves a good story. WebSlides is about sharing and <strong>good karma</strong>. This is about telling the story, and sharing it in a beautiful way. How? Making HTML presentations easy. Hypertext, clean code, and beauty as narrative elements. </p>
+              <p><strong>WebSlides help you build a culture of innovation and excellence</strong>. How to manage a design-driven organization? Leadership through usefulness, openness, empathy, and good taste. When you're really passionate about your job, you can change the world. </p>
+            </div>
+            <ul class="flexblock metrics">
+              <li>
+                <div>
+                  <svg class="fa-twitter">
+                    <use xlink:href="#fa-twitter"></use>
+                  </svg>
+                  @WebSlides
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-github">
+                    <use xlink:href="#fa-github"></use>
+                  </svg>
+                  Contribute
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-phone">
+                    <use xlink:href="#fa-phone"></use>
+                  </svg>
+                  Call us at 555.345.6789
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="fullscreen bg-white">
+          <div class="card-50">
+            <figure>
+              <img src="https://source.unsplash.com/ALtNa-uKy3M/" alt="Bonsai">
+            </figure>
+            <!-- end figure-->
+            <div class="flex-content">
+              <h2><strong>Bonsai</strong></h2>
+              <p class="text-intro">Bonsai is a Japanese art form using trees grown in containers &mdash; .fullscreen > .card-50.</p>
+              <p>Similar practices exist in other cultures, including the Chinese tradition of penjing from which the art originated, and the miniature living landscapes of Vietnamese hòn non bộ.</p>
+              <p class="text-symbols">* * *</p>
+            </div>
+            <!-- end .flex-content-->
+          </div>
+        </section>
+
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="../static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="../static/js/svg-icons.js"></script>
+
+  </body>
+</html>
